@@ -13,7 +13,6 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 interface Props {
     projectId: string;
-
 }
 
 const formSchema = z.object({
