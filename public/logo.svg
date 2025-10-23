@@ -1,6 +1,26 @@
 <svg id="logo-44" width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M20 0C8.9543 0 0 8.9543 0 20C11.0457 20 20 11.0457 20 0Z" fill="#e5e5e5" class="ccustom"></path>
-  <path d="M20 40C31.0457 40 40 31.0457 40 20C28.9543 20 20 28.9543 20 40Z" fill="#e5e5e5" class="ccustom"></path>
-  <path d="M20 0C31.0457 0 40 8.9543 40 20C28.9543 20 20 11.0457 20 0Z" fill="#a3a3a3" class="ccompli2"></path>
-  <path d="M20 40C8.9543 40 -9.65645e-07 31.0457 0 20C11.0457 20 20 28.9543 20 40Z" fill="#a3a3a3" class="ccompli2"></path>
+  <style>
+    :root {
+      --logo-primary: oklch(0.7686 0.1647 70.0804);
+      --logo-accent: oklch(0.6658 0.1574 58.3183);
+    }
+    
+    .dark {
+      --logo-primary: oklch(0.8369 0.1644 84.4286);
+      --logo-accent: oklch(0.6658 0.1574 58.3183);
+    }
+    
+    .ccustom {
+      fill: var(--logo-primary);
+    }
+    
+    .ccompli2 {
+      fill: var(--logo-accent);
+    }
+  </style>
+  
+  <path d="M20 0C8.9543 0 0 8.9543 0 20C11.0457 20 20 11.0457 20 0Z" class="ccustom"></path>
+  <path d="M20 40C31.0457 40 40 31.0457 40 20C28.9543 20 20 28.9543 20 40Z" class="ccustom"></path>
+  <path d="M20 0C31.0457 0 40 8.9543 40 20C28.9543 20 20 11.0457 20 0Z" class="ccompli2"></path>
+  <path d="M20 40C8.9543 40 -9.65645e-07 31.0457 0 20C11.0457 20 20 28.9543 20 40Z" class="ccompli2"></path>
 </svg>
