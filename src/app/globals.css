@@ -236,3 +236,46 @@
     }
   }
 }
+
+/* Scrollbar Styles */
+@layer base {
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full transition-colors;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-muted-foreground/40;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.551 0.0234 264.3637 / 0.2) transparent;
+  }
+
+  .dark * {
+    scrollbar-color: oklch(0.7155 0 0 / 0.2) transparent;
+  }
+
+  /* Optional: Hover effect for Firefox */
+  *:hover {
+    scrollbar-color: oklch(0.551 0.0234 264.3637 / 0.3) transparent;
+  }
+
+  .dark *:hover {
+    scrollbar-color: oklch(0.7155 0 0 / 0.3) transparent;
+  }
+}
