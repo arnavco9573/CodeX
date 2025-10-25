@@ -32,7 +32,7 @@ export const ProjectHeader = ({ projectId }: Props) => {
                         <ChevronDown />
                     </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-muted dark:bg-muted-foreground rounded-lg pl-2! p-1 ml-2" side="bottom" align="start">
+                <DropdownMenuContent className="bg-popover! dark:bg-popover! rounded-lg pl-2! p-1 ml-2" side="bottom" align="start">
                     <DropdownMenuItem asChild>
                         <Link href="/">
                             <ChevronLeftIcon />
