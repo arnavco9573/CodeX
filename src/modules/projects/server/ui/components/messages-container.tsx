@@ -36,7 +36,7 @@ export default function MessagesContainer({
             (message) => message.role === "ASSISTANT"
         );
 
-        if(lastAssistantMessage?.fragment && 
+        if (lastAssistantMessage?.fragment &&
             lastAssistantMessage.id !== lastAssistantMessageIdRef.current) {
             setActiveFragment(lastAssistantMessage.fragment);
             lastAssistantMessageIdRef.current = lastAssistantMessage.id;
