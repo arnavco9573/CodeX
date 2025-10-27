@@ -3,7 +3,6 @@
 [![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue)](https://www.typescriptlang.org/)
 [![Prisma](https://img.shields.io/badge/Prisma-6.10.1-green)](https://www.prisma.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 CodeX is an advanced AI-powered development platform that transforms natural language descriptions into production-ready Next.js applications. It streamlines the web development process by leveraging artificial intelligence to generate high-quality code while maintaining best practices and modern development standards.
 
