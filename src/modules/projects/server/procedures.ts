@@ -69,9 +69,11 @@ export const projectsRouter = createTRPCRouter({
       const createdProject = await prisma.project.create({
         data: {
           userId: ctx.auth.userId,
-          name: generateSlug(2, {
-            format: "kebab",
-          }),
+          name: input.value
+            .toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, "") // Remove special chars
+            .replace(/\s+/g, "-") // Replace spaces with hyphens
+            .slice(0, 50), // Truncate to 50 chars
           messages: {
             create: {
               content: input.value,

@@ -77,10 +77,10 @@ export const codeAgentFunction = inngest.createFunction(
       description: "An expect coding agent",
       system: PROMPT,
       model: openai({
-        model: "gpt-4.1",
-        defaultParameters: {
-          temperature: 0.1,
-        },
+        model: "gpt-5.1",
+        // defaultParameters: {
+        //   temperature: 0.1,
+        // },
       }),
       tools: [
         createTool({
@@ -224,6 +224,17 @@ export const codeAgentFunction = inngest.createFunction(
     const { output: responseOutput } = await responseGenerator.run(
       result.state.data.summary ?? ""
     );
+
+    await step.run("update-project-name", async () => {
+      await prisma.project.update({
+        where: {
+          id: event.data.projectId,
+        },
+        data: {
+          name: parseAgentOutput(fragmentTitleOutput),
+        },
+      });
+    });
 
     const isError =
       !result.state.data.summary ||
